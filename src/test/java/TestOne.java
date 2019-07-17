@@ -7,12 +7,12 @@ public class TestOne extends TestCase {
   private WebDriver driver;
 
   protected void setUp() {
-      ChromeOptions options = new ChromeOptions();
-      options.addArguments("start-maximized");
-      driver = new ChromeDriver();
+    ChromeOptions options = new ChromeOptions();
+    options.addArguments("start-maximized");
+    driver = new ChromeDriver();
   }
 
   public void testAdd() {
-      driver.get("https://google.com.au");
+    driver.get("https://google.com.au");
   }
 }
