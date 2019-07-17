@@ -12,7 +12,7 @@
 ===========================
 - Page Objects
 
-## Linting & Static Analysis
+## Linting
 =============================
 - google-java-format-gradle-plugin
 
@@ -22,4 +22,12 @@ $ ./gradlew goJF
 Execute the task verifyGoogleJavaFormat to verify that all *.java files are formatted properly
 $ ./gradlew verGJF
 
-- Using Codacy because it is easy to setup
+## Test Execution
+==================
+- ./gradlew test
+
+Reports could be seen in <PWD>/build/reports/tests/test/classes/TestOne.html
+
+## Assumptions
+=================
+- Expecting Java , Gradle & Chrome Browser to be pre-installed.
