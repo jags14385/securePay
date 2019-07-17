@@ -1,19 +1,18 @@
-import static com.google.common.truth.Truth.assertThat;
-
 import junit.framework.*;
-import org.junit.Test;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class TestOne extends TestCase {
-  private int value1, value2;
+  private WebDriver driver;
 
   protected void setUp() {
-    value1 = 3;
-    value2 = 3;
+      ChromeOptions options = new ChromeOptions();
+      options.addArguments("start-maximized");
+      driver = new ChromeDriver();
   }
 
-  @Test
   public void testAdd() {
-    double result = value1 + value2;
-    assertThat(result).isEqualTo(6);
+      driver.get("https://google.com.au");
   }
 }

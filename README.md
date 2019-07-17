@@ -31,3 +31,8 @@ Reports could be seen in <PWD>/build/reports/tests/test/classes/TestOne.html
 ## Assumptions
 =================
 - Expecting Java , Gradle & Chrome Browser to be pre-installed.
+- Working environment is :  Mac OS
+
+## Learning
+=================
+- Use Chrome Options for Chrome Driver
