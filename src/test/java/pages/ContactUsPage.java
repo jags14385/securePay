@@ -1,7 +1,9 @@
 package pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import utils.DataUtils;
 
 public class ContactUsPage extends BasePage {
@@ -20,7 +22,13 @@ public class ContactUsPage extends BasePage {
     getWebDriver().get(contactUsURL);
   }
 
+  private void isPageLoaded() {
+    WebDriverWait webDriverWait = new WebDriverWait(getWebDriver(), 5);
+    webDriverWait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(firstNameLocator)));
+  }
+
   public void enterContactFormDetails() {
+    isPageLoaded();
     String firstName = DataUtils.generateRandomString(8);
     getWebDriver().findElement(By.cssSelector(firstNameLocator)).sendKeys(firstName);
 
