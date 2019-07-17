@@ -14,7 +14,7 @@ public class ContactUsPage extends BasePage {
   private final String phoneNumberLocator = "input[placeholder=\"Phone Number\"]";
   private final String urlLocator = "input[placeholder=\"https://\"]";
   private final String companyNameLocator = "input[placeholder=\"Company\"]";
-  private final String reasondropDownLocator = "reason-for-enquiry";
+  private final String reasonDropDownLocator = "reason-for-enquiry";
 
   public void navigate() {
     getWebDriver().get(contactUsURL);
@@ -39,7 +39,7 @@ public class ContactUsPage extends BasePage {
     String companyName = DataUtils.generateRandomString(8);
     getWebDriver().findElement(By.cssSelector(companyNameLocator)).sendKeys(companyName);
 
-    Select drpReason = new Select(getWebDriver().findElement(By.name(reasondropDownLocator)));
+    Select drpReason = new Select(getWebDriver().findElement(By.name(reasonDropDownLocator)));
     drpReason.selectByVisibleText("Support");
   }
 }
