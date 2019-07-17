@@ -26,9 +26,9 @@ Execute the task verifyGoogleJavaFormat to verify that all *.java files are form
 
 ## Test Execution
 ==================
-- ./gradlew test
+- ./gradlew clean test --tests specs.SecurePaySpec.*
 
-Reports could be seen in <PWD>/build/reports/tests/test/classes/TestOne.html
+Reports could be seen in <PWD>/build/reports/tests/test/index.html
 
 ## Assumptions
 =================
